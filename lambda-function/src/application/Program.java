@@ -20,8 +20,7 @@ public class Program {
         list.add(new Product("HD Case", 80.90));
 
         //Cria nova lista em caixa alta
-        Function<Product, String> func = p -> p.getName().toUpperCase();
-        List<String> names = list.stream().map(func).collect(Collectors.toList());
+        List<String> names = list.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
 
         names.forEach(System.out::println);
 
